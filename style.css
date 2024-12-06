@@ -1,0 +1,363 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+/* HEADER */
+
+header{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: blue;
+
+}
+
+body{
+
+    display: grid;
+
+
+
+    align-items: center;
+
+
+   grid-template-rows: 100px;
+
+}
+
+
+
+
+/* MAIN DIV */
+
+
+.main-div{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ 
+
+    width: 100%;
+    height: 80vh;
+    margin-top: 40px;
+
+    background-color: antiquewhite;
+
+
+}
+
+/* ARMARIO */
+
+.armario{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    
+
+ 
+    width: 50%;
+    height: 90%;
+
+    background-color: brown;
+
+}
+
+/* PUERTAS */
+
+.armario #puerta1{
+    
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+
+    grid-template-rows: 50% 15px 50% ;
+
+    width: 100%;
+    height: 100%;
+
+
+    /* textura de la madera de --> https://www.transparenttextures.com/wood.html */
+
+    background-color: #ff6f00;
+    background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+    transform-style: preserve-3d;
+    transform-origin: left;
+    perspective: 600px;
+   
+
+}
+
+
+.armario #puerta1 .head-door{
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    width: 70%;
+    height: 80%;
+
+    grid-row: 1;
+
+    background-color: red;
+
+}
+
+/* GLASS */
+
+.armario #puerta1 .head-door .glass:nth-of-type(1){
+
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+
+}
+
+.armario #puerta1 .head-door .glass:nth-of-type(3){
+
+    border-right: 5px solid black;
+
+}
+
+.armario #puerta1 .head-door .glass:nth-of-type(2){
+
+    border-bottom: 5px solid black;
+
+}
+
+.armario #puerta1 .head-door .glass{
+
+    
+
+    background: rgba( 255, 255, 255, 0.2 );
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+    backdrop-filter: blur( 6.5px );
+
+    -webkit-backdrop-filter: blur( 6.5px );
+    
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    /*? hecho con https://hype4.academy/tools/glassmorphism-generator */
+
+}
+
+.armario #puerta1 .footer-door{
+
+    width: 50%;
+    height: 60%;
+
+    grid-row: 3;
+
+
+    /* textura de la madera de --> https://www.transparenttextures.com/wood.html */
+
+    background-color: #ab4400;
+    background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+}
+
+.armario #puerta1 .pomo{
+
+    display: flex;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    
+    border-radius: 100px;
+    justify-self: right;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: rgb(0, 0, 0);
+
+}
+
+.armario #puerta2{
+
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+
+    grid-template-rows: 50% 15px 50% ;
+
+    width: 100%;
+    height: 100%;
+
+ 
+ 
+    /* textura de la madera de --> https://www.transparenttextures.com/wood.html */
+
+    background-color: #ff6f00;
+    background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    
+ 
+    transform-style: preserve-3d;
+    transform-origin: right;
+    perspective-origin: 80% 50%;
+    perspective: 200px;
+
+}
+
+.armario #checkbox{
+
+    width: 30px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    
+
+}
+
+.armario #puerta2 .head-door{
+
+    display: grid;
+
+    width: 70%;
+    height: 80%;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-row: 1;
+
+    background-color: red;
+
+}
+
+.armario #puerta2 .head-door .glass:nth-of-type(1){
+
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+
+}
+
+.armario #puerta2 .head-door .glass:nth-of-type(3){
+
+    border-right: 5px solid black;
+
+}
+
+.armario #puerta2 .head-door .glass:nth-of-type(2){
+
+    border-bottom: 5px solid black;
+
+}
+
+.armario #puerta2 .head-door .glass{
+
+    
+
+    background: rgba( 255, 255, 255, 0.2 );
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+    backdrop-filter: blur( 6.5px );
+
+    -webkit-backdrop-filter: blur( 6.5px );
+    
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    /*? hecho con https://hype4.academy/tools/glassmorphism-generator */
+
+}
+
+.armario #puerta2 .footer-door{
+
+    width: 50%;
+    height: 60%;
+
+    grid-row: 3;
+
+
+    /* textura de la madera de --> https://www.transparenttextures.com/wood.html */
+
+    background-color: #ab4400;
+    background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+}
+
+.armario #puerta2 .pomo{
+
+    display: flex;
+
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+
+    border-radius: 100px;
+
+    justify-self: left;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: rgb(2, 2, 2);
+
+}
+
+
+/* SELECCION POMO DEL POMO */
+
+.armario #puerta1:focus-within{
+
+  
+    animation: spin2 3s both normal;
+
+}
+
+
+.armario #puerta1:focus-within ~ #puerta2{
+
+ 
+    animation: spin 3s both normal;
+
+}
+
+.armario #puerta2:focus-within {
+    
+}
+
+
+.armario #puerta2:focus-within ~ #puerta1 {
+
+    
+}
+
+
+/* ANIMACION PUERTA OPEN */
+
+
+
+
+
+
+
+
+
+

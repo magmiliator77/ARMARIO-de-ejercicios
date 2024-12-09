@@ -65,9 +65,6 @@ body{
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    
-
  
     width: 50%;
     height: 90%;
@@ -85,6 +82,7 @@ body{
     justify-items: center;
     align-items: center;
 
+
     grid-template-rows: 50% 15px 50% ;
 
     width: 100%;
@@ -100,7 +98,11 @@ body{
     transform-style: preserve-3d;
     transform-origin: left;
     perspective: 600px;
+    backface-visibility: visible;
+
+
    
+    z-index: 2;
 
 }
 
@@ -117,7 +119,7 @@ body{
 
     grid-row: 1;
 
-    background-color: red;
+
 
 }
 
@@ -127,17 +129,30 @@ body{
 
     border-right: 5px solid black;
     border-bottom: 5px solid black;
-
+    border-left: 5px solid black;
+    border-top: 5px solid black;
 }
 
 .armario #puerta1 .head-door .glass:nth-of-type(3){
 
     border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
 
 }
 
 .armario #puerta1 .head-door .glass:nth-of-type(2){
 
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    
+
+}
+
+.armario #puerta1 .head-door .glass:nth-of-type(4){
+
+    border-right: 5px solid black;
     border-bottom: 5px solid black;
 
 }
@@ -218,7 +233,9 @@ body{
     transform-style: preserve-3d;
     transform-origin: right;
     perspective-origin: 80% 50%;
-    perspective: 200px;
+    perspective: 1000px;
+
+    z-index: 2;
 
 }
 
@@ -245,7 +262,7 @@ body{
 
     grid-row: 1;
 
-    background-color: red;
+
 
 }
 
@@ -253,20 +270,36 @@ body{
 
     border-right: 5px solid black;
     border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-top: 5px solid black;
 
 }
 
 .armario #puerta2 .head-door .glass:nth-of-type(3){
 
     border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
 
 }
 
 .armario #puerta2 .head-door .glass:nth-of-type(2){
 
     border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    
 
 }
+
+.armario #puerta2 .head-door .glass:nth-of-type(4){
+
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+
+}
+
+
 
 .armario #puerta2 .head-door .glass{
 
@@ -283,6 +316,7 @@ body{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
     /*? hecho con https://hype4.academy/tools/glassmorphism-generator */
+    
 
 }
 
@@ -329,7 +363,12 @@ body{
   
     animation: spin2 3s both normal;
 
+ 
+
 }
+
+
+
 
 
 .armario #puerta1:focus-within ~ #puerta2{
@@ -339,23 +378,54 @@ body{
 
 }
 
-.armario #puerta2:focus-within {
+
+
+
+/* INTERIOR DEL ARMARIO */
+
+
+
+.interior{
+
+    display: grid;
+
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+
+    width: 100%;
+    max-width: 50%;
+
+    height: 100%;
+    max-height: 71.8%;
+    grid-template-columns: 1fr 1fr;
     
+    position: absolute;
+    
+    background-color: red;
+
+    
+
+    z-index: 1;
+
 }
 
 
-.armario #puerta2:focus-within ~ #puerta1 {
+/* ELEMENTOS DEL INTERIOR DEL ARMARIO */
+
+
+.interior a{
+
+
 
     
+
 }
 
+.interior #article1 img{
 
-/* ANIMACION PUERTA OPEN */
+    width: auto;
+    height: 100px;
 
-
-
-
-
+}
 
 
 
